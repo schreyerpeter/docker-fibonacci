@@ -1,20 +1,19 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Fib from './Pages/Fib';
-import OtherPage from './Pages/OthePage';
+import "./App.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import OtherPage from "./Pages/OtherPage";
+import Fib from "./Pages/Fib";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
-          Fibonacci Calculator
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
         <div>
-          <Route exact path="/" element={<Fib />} />
-          <Route path="/otherpage" element={<OtherPage />} />
+          <Route exact path="/" component={Fib} />
+          <Route path="/otherpage" component={OtherPage} />
         </div>
       </div>
     </Router>
